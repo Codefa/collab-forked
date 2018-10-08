@@ -1,4 +1,4 @@
-# sauspa
+# collab
 
 > My fantabulous Nuxt.js project
 
