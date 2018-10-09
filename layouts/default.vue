@@ -4,7 +4,8 @@
 
       <b-navbar-toggle target="nav_collapse" />
       <div v-if="$route.name == 'search'">
-        <searchBar />
+        <gmap-autocomplete :select-first-on-enter="true" class="form-control" @place_changed="setPlace">
+        </gmap-autocomplete>
       </div>
       <b-navbar-brand to="/" v-else>
         <img class="nav-logo" src="https://sauspa.com/assets/img/logo.svg" alt="Sauspa logo">
@@ -20,7 +21,7 @@
       </b-collapse>
     </b-navbar>
     <br>
-    <b-container>
+    <b-container fluid>
       <b-row>
         <nuxt />
       </b-row>
