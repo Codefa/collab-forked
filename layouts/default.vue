@@ -4,8 +4,7 @@
 
       <b-navbar-toggle target="nav_collapse" />
       <div v-if="$route.name == 'search'">
-        <gmap-autocomplete :select-first-on-enter="true" class="form-control" @place_changed="setPlace">
-        </gmap-autocomplete>
+        <GAutoComplete />
       </div>
       <b-navbar-brand to="/" v-else>
         <img class="nav-logo" src="https://sauspa.com/assets/img/logo.svg" alt="Sauspa logo">
@@ -30,7 +29,12 @@
 </template>
 
 <script>
+import GAutoComplete from '@/components/Search/GAutoComplete'
+
 export default {
+  components: {
+    GAutoComplete
+  },
   data () {
     return {
       menuItems: [

@@ -34,6 +34,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/vue2-google-maps',
+    '~/plugins/eventBus',
     {
       src: '~/plugins/siema-slider.js',
       ssr: false
