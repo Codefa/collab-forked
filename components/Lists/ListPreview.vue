@@ -1,13 +1,11 @@
 <template>
   <div>
-    <b-col cols="12">
-      <b-card :title="name" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
-        <p class="card-text">
-          {{ email }}
-        </p>
-        {{ address }} - {{ id }}
-      </b-card>
-    </b-col>
+    <b-card :title="name" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
+      <p class="card-text">
+        {{ email }}
+      </p>
+      {{ address }} - {{ id }}
+    </b-card>
   </div>
 </template>
 

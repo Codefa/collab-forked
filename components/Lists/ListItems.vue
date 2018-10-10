@@ -1,15 +1,6 @@
 <template>
   <div>
-    <b-container fluid>
-      <b-row>
-      <ListPreview v-for="list in lists"
-        :key="list.id"
-        :id="list.id"
-        :name="list.name"
-        :email="list.email"
-        :address="list.address" />
-      </b-row>
-    </b-container>
+    <ListPreview v-for="list in lists" :key="list.id" :id="list.id" :name="list.name" :email="list.email" :address="list.address" />
   </div>
 </template>
 

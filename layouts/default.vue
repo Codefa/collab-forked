@@ -20,11 +20,7 @@
       </b-collapse>
     </b-navbar>
     <br>
-    <b-container fluid>
-      <b-row>
-        <nuxt />
-      </b-row>
-    </b-container>
+    <nuxt />
   </div>
 </template>
 

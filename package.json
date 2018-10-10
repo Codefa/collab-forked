@@ -19,6 +19,7 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "cross-env": "^5.2.0",
     "nuxt": "^2.1.0",
+    "vue-hotel-datepicker": "^2.5.0",
     "vue2-google-maps": "^0.10.2",
     "vue2-siema": "^0.2.2"
   },
