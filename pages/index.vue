@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <b-container>
     <div>
       <b-col>
         <b-card bg-variant="dark" text-variant="white" title="Book unique homes and experiences.">
@@ -21,7 +21,7 @@
         <button @click="$refs.siema.next()">Next</button>
       </no-ssr>
     </div>
-  </div>
+  </b-container>
 </template>
 
 <script>
