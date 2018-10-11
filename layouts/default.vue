@@ -23,6 +23,7 @@
 
 		<b-nav-item @click="flip('signin', $event)" href="#signin">Login</b-nav-item>
 		<b-nav-item @click="flip('signup', $event)" href="#signup">Signup</b-nav-item>
+    </b-collapse>
     </b-navbar-nav>
   <nuxt/>
 </div>
