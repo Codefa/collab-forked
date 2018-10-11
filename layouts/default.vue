@@ -11,10 +11,10 @@
         <b-badge variant="primary">BETA</b-badge>
       </b-navbar-brand>
 
-      <b-collapse v-for="item in menuItems" id="nav_collapse" :key="item.title" is-nav>
+      <b-collapse id="nav_collapse" :key="item.title" is-nav>
 
         <b-navbar-nav class="ml-auto">
-          <b-nav-item :to="item.path">{{ item.title }}</b-nav-item>
+          <b-nav-item v-for="item in menuItems" :to="item.path">{{ item.title }}</b-nav-item>
         </b-navbar-nav>
 
       </b-collapse>
