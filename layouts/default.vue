@@ -21,7 +21,6 @@
     </b-collapse>
   </b-navbar>
 </div>
-    <nuxt />
   </div>
 </template>
 
@@ -48,7 +47,6 @@ export default {
 
 
 <style>
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
 nav.navbar {
     border-bottom: 1px solid rgb(0, 0, 0, .1);
