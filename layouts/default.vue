@@ -2,7 +2,7 @@
   <div>
  <b-navbar toggleable="md" type="light" fixed="top">
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-  <b-navbar-brand href="/"><img class="nav-logo" src="assets/img/logo.svg" alt="Sauspa logo"><b-badge variant="primary">BETA</b-badge></b-navbar-brand>
+  <b-navbar-brand href="/"><img class="nav-logo" src="https://sauspa.com/assets/img/logo.svg" alt="Sauspa logo"><b-badge variant="primary">BETA</b-badge></b-navbar-brand>
   <b-collapse is-nav id="nav_collapse">
 
         <b-navbar-nav class="ml-auto">
