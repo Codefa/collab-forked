@@ -1,4 +1,5 @@
 <template>
+<div>
   <b-container>
     <div>
       <b-col>
@@ -22,6 +23,7 @@
       </no-ssr>
     </div>
   </b-container>
+  </div>
 </template>
 
 <script>
