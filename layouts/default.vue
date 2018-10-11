@@ -4,7 +4,7 @@
     <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
     <b-collapse is-nav id="nav_dropdown_collapse">
       <b-navbar-nav>
-        <b-nav-item href="#/">Home</b-nav-item>
+        <b-nav-item href="/">Home</b-nav-item>
         <b-nav-item href="/search">Search</b-nav-item>
         <!-- Navbar dropdowns -->
         <b-nav-item-dropdown text="Lang" right>
