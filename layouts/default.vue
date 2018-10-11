@@ -25,6 +25,7 @@
 		<b-nav-item @click="flip('signup', $event)" href="#signup">Signup</b-nav-item>
     </b-collapse>
     </b-navbar-nav>
+    </b-navbar>
   <nuxt/>
 </div>
   
