@@ -20,8 +20,9 @@
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
-</div>
   <nuxt/>
+</div>
+  
 </template>
 
 <script>
