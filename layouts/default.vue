@@ -21,7 +21,7 @@
     </b-collapse>
   </b-navbar>
 </div>
-  </div>
+  <nuxt/>
 </template>
 
 <script>
