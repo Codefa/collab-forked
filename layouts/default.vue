@@ -57,6 +57,7 @@ export default {
 <style>
 
 nav.navbar {
+background: #fff;
     border-bottom: 1px solid rgb(0, 0, 0, .1);
 }
 a.navbar-brand img {
