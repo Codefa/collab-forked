@@ -2,7 +2,8 @@
   <div>
     <b-btn v-b-toggle.collapse1 variant="primary">Guests</b-btn>
     <b-collapse id="collapse1" class="mt-2">
-      <div class="my-4" ref="form">
+    <b-card>
+      <p class="card-text" ref="form">
         adult -
         <b-button size="sm" variant="secondary" @click="decreaseAdults(adult)">
           _
@@ -31,7 +32,8 @@
         <b-button size="sm" variant="secondary" @click="increaseBabies(Babies)">
           +
         </b-button>
-      </div>
+      </p>
+      </b-card>
     </b-collapse>
   </div>
 </template>
