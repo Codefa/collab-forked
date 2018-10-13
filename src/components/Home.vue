@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="Home">
     <b-col>
       <b-card bg-variant="dark" text-variant="white" title="Book unique homes and experiences." class="text-center">
         <span class="card-text">
@@ -58,7 +58,7 @@ import GAutoComplete from '@/components/Search/GAutoComplete'
 import VueTinySlider from 'vue-tiny-slider'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     GAutoComplete,
     'tiny-slider': VueTinySlider
