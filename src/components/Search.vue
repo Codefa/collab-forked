@@ -20,7 +20,14 @@
             </b-col>
           </span>
         </b-col>
-        <b-col><Map :markers="setMarkers" /></b-col>
+        <b-col>
+        <button 
+          @click="showMap = !showMap">
+          {{ showMap ? 'Hide' : 'Show' }} Map</button>
+          <div v-show="showMap">
+        <Map :markers="setMarkers" />
+        </div>
+        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -39,7 +46,9 @@ export default {
     GuestFilter
   },
   data () {
-    return {}
+    return {
+      showMap: true
+    }
   },
   computed: {
     setMarkers () {
