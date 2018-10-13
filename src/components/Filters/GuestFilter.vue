@@ -1,7 +1,7 @@
 <template>
   <div>
-    <b-btn v-b-modal.modal1>Guests</b-btn>
-    <b-modal id="modal1" title="Bootstrap-Vue">
+    <b-btn v-b-toggle.collapse1 variant="primary">Guests</b-btn>
+    <b-collapse id="collapse1" class="mt-2">
       <div class="my-4" ref="form">
         adult -
         <b-button size="sm" variant="secondary" @click="decreaseAdults(adult)">
@@ -32,7 +32,7 @@
           +
         </b-button>
       </div>
-    </b-modal>
+    </b-collapse>
   </div>
 </template>
 
