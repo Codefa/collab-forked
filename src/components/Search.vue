@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="Search">
     <b-container fluid>
       <b-row>
         <b-col lg="2">
@@ -32,7 +32,7 @@ import DateFilter from '@/components/Filters/DateFilter'
 import GuestFilter from '@/components/Filters/GuestFilter'
 
 export default {
-  name: 'search',
+  name: 'Search',
   components: {
     Map,
     DateFilter,
