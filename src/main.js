@@ -12,6 +12,7 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 import Siema from 'vue2-siema'
 import AirbnbStyleDatepicker from 'vue-airbnb-style-datepicker'
 import 'vue-airbnb-style-datepicker/dist/vue-airbnb-style-datepicker.min.css'
+import '../src/assets/app.css'
 
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
