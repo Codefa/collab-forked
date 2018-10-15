@@ -1,4 +1,4 @@
-# airbnb-clone-vue
+# collab
 
 > A Vue.js project
 
