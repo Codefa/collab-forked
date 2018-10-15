@@ -4,6 +4,38 @@
             <div id="searchBar" @keydown.enter="search">
                 <GAutoComplete />
             </div>
+            <section id="home_categories">
+                <b-container>
+                    <b-row>
+                        <b-col>
+                            <h1 class="page-title">
+                                namess
+                            </h1>
+                            <a href="/offers" id="view_more">
+                                view more</a>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+
+                        <b-col cols="4" class="mb-3">
+                            <a href="/offers">
+                                <div class="item_block_inline shadow-sm">
+                                    <div class="item_block_inline_img">
+                                        <img src="/">
+                                    </div>
+                                    <div class="item_block_inline_body">
+                                        <span class="title">
+                                            Name</span>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </b-col>
+
+                    </b-row>
+
+                </b-container>
+            </section>
         </div>
     </b-container>
 
