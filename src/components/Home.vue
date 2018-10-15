@@ -1,56 +1,9 @@
 <template>
     <b-container>
         <div id="Home">
-            <b-col>
-                <b-card bg-variant="dark" text-variant="white" title="Book unique homes and experiences." class="text-center">
-                    <span class="card-text">
-                        <div id="searchBar" @keydown.enter="search">
-                            <GAutoComplete />
-                        </div>
-                    </span>
-                </b-card>
-            </b-col>
-
-            <h3>Top items</h3>
-            <siema ref="siema" :current.sync="curSlide" :options="options" class="siema s">
-                <div class="slide">
-                    <span v-for="list in loadedLists" :key="list.id">
-                        <b-card :title="list.name" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
-                            <p class="card-text">
-                                {{ list.email }}
-                            </p>
-                            {{ list.address }} - {{ list.id }}
-                        </b-card>
-                    </span>
-                </div>
-            </siema>
-            <!-- some actions.. -->
-            <div class="btn" @click="$refs.siema.prev()">Prev</div>
-            <div class="btn" @click="$refs.siema.next()">Next</div>
-            <!-- see :current.sync in action...)  -->
-            <div class="btn">Current slide: {{ curSlide }}</div>
-            <br><br>
-
-            <h3>luxury items</h3>
-            <siema ref="siemaLuxury" :current.sync="curSlide" :options="options" class="siema s">
-                <div class="slide">
-                    <span v-for="list in loadedLuxury" :key="list.name">
-                        <b-col cols="12">
-                            <b-card :title="list.name" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
-                                <p class="card-text">
-                                    {{ list.email }}
-                                </p>
-                                {{ list.address }} - {{ list.id }}
-                            </b-card>
-                        </b-col>
-                    </span>
-                </div>
-            </siema>
-            <!-- some actions.. -->
-            <div class="btn" @click="$refs.siema.prev()">Prev</div>
-            <div class="btn" @click="$refs.siema.next()">Next</div>
-            <!-- see :current.sync in action...)  -->
-            <div class="btn">Current slide: {{ curSlide }}</div>
+            <div id="searchBar" @keydown.enter="search">
+                <GAutoComplete />
+            </div>
         </div>
     </b-container>
 
