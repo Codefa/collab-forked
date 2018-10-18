@@ -1,178 +1,67 @@
 <template>
-    <b-container>
-        <div id="Home">
-            <div id="searchBar" @keydown.enter="search">
-                <GAutoComplete />
-            </div>
-            <section id="home_categories">
-                <b-container>
-                    <b-row>
-                        <b-col>
-                            <h1 class="page-title">
-                                namess
-                            </h1>
-                            <a href="/offers" id="view_more">
-                                view more</a>
-                        </b-col>
-                    </b-row>
-                    <b-row>
+    <div class="Home">
 
-                        <b-col cols="4" class="mb-3">
-                            <a href="/offers">
-                                <div class="item_block_inline shadow-sm">
-                                    <div class="item_block_inline_img">
-                                        <img src="/">
-                                    </div>
-                                    <div class="item_block_inline_body">
-                                        <span class="title">
-                                            Name</span>
-                                    </div>
+        <section id="intro_search">
+            <b-container>
+                <b-row>
+                    <b-col cols="8">
+                        <h1 class="header-title">
+                            <span class="text-primary">Sauspa</span><br>Book unique experiences</h1>
+                        <div>
+                            <div id="main_home_search" class="card p-3">
+                                <MainSearch />
+                            </div>
+                            <a aria-disabled="false" class="float-right link_all_cities" href="/explore">See all cities</a>
+                        </div>
+                    </b-col>
+                </b-row>
+            </b-container>
+        </section>
+        <section id="banner">
+            <b-container>
+                <b-row>
+                    <b-col>
+                        <b-card overlay img-src="" img-alt="Welcome to Sauspa" title="Welcome to Sauspa" sub-title="Subtitle" class="banner_big">
+                            <p class="card-text">
+                                Some quick example text to build on the card and make
+                                up the bulk of the card's content.
+                            </p>
+                            <b-button href="/luxury" variant="light">
+                                Read more
+                            </b-button>
+                        </b-card>
 
-                                </div>
-                            </a>
-                        </b-col>
-
-                    </b-row>
-
-                </b-container>
-            </section>
-        </div>
-    </b-container>
-
+                    </b-col>
+                </b-row>
+            </b-container>
+        </section>
+        <Destinations />
+        <UserLastViews />
+        <LastListings />
+        <LastLuxury />
+    </div>
 </template>
 
 <script>
-    import GAutoComplete from '@/components/Search/GAutoComplete'
-    import VueTinySlider from 'vue-tiny-slider'
+    import MainSearch from '@/components/Includes/MainSearch'
+    import LastListings from '@/components/Homepage/LastListings'
+    import UserLastViews from '@/components/Homepage/UserLastViews'
+    import LastLuxury from '@/components/Homepage/LastLuxury'
+    import Destinations from '@/components/Homepage/Destinations'
+
 
     export default {
         name: 'Home',
         components: {
-            GAutoComplete,
-            'tiny-slider': VueTinySlider
+            MainSearch,
+            LastListings,
+            UserLastViews,
+            LastLuxury,
+            Destinations,
         },
         data() {
-            return {
-                curSlide: 0,
-                options: {
-                    draggable: true,
-                    loop: false,
-                    perPage: 5
-                }
-            }
-        },
-        computed: {
-            loadedLists() {
-                return this.$store.getters.loadedLists
-            },
-            loadedLuxury() {
-                return this.$store.getters.loadedLuxury
-            }
-        },
-        mounted() {
-            this.$store.dispatch('loadedLists')
-            this.$store.dispatch('loadedLuxury')
-        },
-        methods: {
-            search() {
-                this.$router.push('/search')
-            }
+            return {}
         }
     }
 
 </script>
-
-<style scoped>
-    body {
-        background: rgb(52, 54, 58);
-        padding: 20px;
-        font-family: Helvetica;
-    }
-
-    #app>div {
-        background: #fff;
-        border-radius: 4px;
-        padding: 20px;
-        transition: all 0.2s;
-        max-width: 800px;
-        margin: 25px auto;
-    }
-
-    h2 {
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    span {
-        color: #777;
-        font-size: 10px;
-    }
-
-    .btn {
-        display: inline-block;
-        border: 2px solid #3a76c5;
-        color: #3a76c5;
-        padding: 4px 10px;
-        transition-duration: 0.2s;
-        cursor: pointer;
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    .btn:hover {
-        color: #fff;
-        background: #3a76c5;
-    }
-
-    a {
-        color: #3a76c5;
-    }
-
-    input {
-        border: 2px solid #3a76c5;
-        color: #3a76c5;
-        padding: 5px 10px;
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    .s {
-        overflow: hidden;
-        min-height: 200px;
-    }
-
-    .s .slide {
-        height: 156px;
-        line-height: 156px;
-        text-align: center;
-        font-size: 24px;
-    }
-
-    pre {
-        white-space: pre-line;
-        padding: 18px;
-        background: #cecece;
-        border-radius: 4px;
-    }
-
-    .intro img {
-        max-width: 128px;
-    }
-
-    .intro {
-        text-align: center;
-    }
-
-    .title {
-        font-size: 24px;
-        color: #777;
-        text-align: center;
-        border-bottom: 1px solid #777;
-    }
-
-    .demolink {
-        font-size: 12px;
-        margin-top: 12px;
-    }
-
-</style>

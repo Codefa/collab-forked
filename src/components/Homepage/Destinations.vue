@@ -1,0 +1,94 @@
+<template>
+    <section id="destinations">
+        <b-container>
+            <b-row>
+                <b-col>
+                    <h1 class="page-title">Destinations</h1>
+                    <a href="/explore" id="view_more">view more</a>
+                </b-col>
+            </b-row>
+
+            <b-row>
+                <b-col cols="2">
+                    <a href="#">
+                        <div class="item_city">
+                            <div class="item_city__img" style="background-image: url(https://a0.muscache.com/im/pictures/82af5bc4-ed5b-44d9-9209-ac0f2fbf8986.jpg?aki_policy=large);"></div>
+                            <div class="_wyr5tw"></div>
+                            <div class="item_city__desc">
+                                <span class="item_city__name">Miami </span>
+                                <span class="item_city__price">22€ per person</span>
+                            </div>
+                        </div>
+                    </a>
+                </b-col>
+                <b-col cols="2">
+                    <a href="#">
+                        <div class="item_city">
+                            <div class="item_city__img" style="background-image: url(https://a0.muscache.com/im/pictures/60145c65-7c36-4ac5-8129-6ae9a0d27a81.jpg?aki_policy=large);"></div>
+                            <div class="_wyr5tw"></div>
+                            <div class="item_city__desc">
+                                <span class="item_city__name">Tokyo</span>
+                                <span class="item_city__price">22€ per person</span>
+                            </div>
+                        </div>
+                    </a>
+                </b-col>
+            </b-row>
+        </b-container>
+    </section>
+</template>
+<script>
+    export default {
+        name: 'Destinations',
+
+        data() {
+            return {}
+        }
+    }
+
+</script>
+
+<style>
+    .item_city {
+        height: 250px;
+        width: 100%;
+        position: relative;
+    }
+
+    .item_city__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    ._wyr5tw {
+        background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 3%, rgb(0, 0, 0) 100%) !important;
+        opacity: 0.6 !important;
+        position: absolute !important;
+        height: 100% !important;
+        width: 100% !important;
+        left: 0px !important;
+        bottom: 0px !important;
+        border-radius: 3px;
+    }
+
+    .item_city__desc {
+        position: absolute !important;
+        height: 35% !important;
+        width: 100% !important;
+        left: 0px !important;
+        bottom: 0px !important;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .item_city__name {
+        font-weight: bold;
+        display: block;
+        font-size: 18px;
+    }
+
+</style>

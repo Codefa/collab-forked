@@ -1,37 +1,29 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Vuex from 'vuex'
 import BootstrapVue from 'bootstrap-vue'
-import { store } from './store'
-import App from './App'
+import App from './App.vue'
 import router from './router'
+import * as VueGoogleMaps from 'vue2-google-maps'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import * as VueGoogleMaps from 'vue2-google-maps'
-import Siema from 'vue2-siema'
-import AirbnbStyleDatepicker from 'vue-airbnb-style-datepicker'
-import 'vue-airbnb-style-datepicker/dist/vue-airbnb-style-datepicker.min.css'
-import '../src/assets/app.css'
+import NavBar from './components/Includes/NavBar'
+// import ResortLists from './components/SearchListings/ResortLists'
+import '../src/assets/css/app.css'
 
-Vue.use(Vuex)
 Vue.use(BootstrapVue)
-Vue.use(Siema)
-const datepickerOptions = {}
-Vue.use(AirbnbStyleDatepicker, datepickerOptions)
 Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyCe1exctmeJjIb4guyT6newSpyJ7kA3aLc',
-    libraries: 'places'
-  }
+    load: {
+        key: 'AIzaSyCe1exctmeJjIb4guyT6newSpyJ7kA3aLc',
+        libraries: 'places'
+    }
 })
-Vue.config.productionTip = false
+Vue.component('app-header', NavBar)
+// Vue.component('app-resort-lists', Home)
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  store,
-  template: '<App/>',
-  components: { App }
+    el: '#app',
+    router,
+    template: '<App/>',
+    components: {
+        App
+    }
 })
