@@ -1,4 +1,4 @@
-# airbnb-clone-vue
+# SPA
 
 > A Vue.js project
 
