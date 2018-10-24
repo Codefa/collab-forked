@@ -6,6 +6,7 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import NavBar from './components/Includes/NavBar'
+import Footer from './components/Includes/Footer'
 // import ResortLists from './components/SearchListings/ResortLists'
 import '../src/assets/css/app.css'
 
@@ -17,7 +18,7 @@ Vue.use(VueGoogleMaps, {
     }
 })
 Vue.component('app-header', NavBar)
-// Vue.component('app-resort-lists', Home)
+Vue.component('app-footer', Footer)
 
 new Vue({
     el: '#app',

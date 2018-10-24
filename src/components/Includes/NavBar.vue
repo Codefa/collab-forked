@@ -21,7 +21,7 @@
                         <b-dropdown-item href="/user/bookings">My bookings</b-dropdown-item>
                         <b-dropdown-item href="/user/saved">Saved</b-dropdown-item>
                         <b-dropdown-item href="/user/settings">My account</b-dropdown-item>
-                        <b-dropdown-item href="/manager/dashboard">Manager centro</b-dropdown-item>
+                        <b-dropdown-item href="/partner/dashboard">Dashboard</b-dropdown-item>
                         <b-dropdown-divider></b-dropdown-divider>
                         <b-dropdown-item href="user/logout">logout</b-dropdown-item>
                     </b-nav-item-dropdown>
