@@ -104,6 +104,29 @@
      text-decoration: none !important;
  }
 
+ .custom-control-label::before {
+     top: 2px;
+     left: -30px;
+     display: block;
+     width: 20px;
+     height: 20px;
+     background-color: transparent;
+     border: 1px solid rgba(0, 0, 0, .3);
+     border-radius: 0px !important;
+ }
+
+ .custom-control-label::after {
+     top: 2px;
+     left: -30px;
+     width: 20px;
+     height: 20px;
+     border-radius: 0px !important;
+ }
+
+ .custom-radio .custom-control-label::before {
+     border-radius: 50% !important;
+ }
+
  .badge {
      padding: 1px 4px;
      font-size: 10px;
