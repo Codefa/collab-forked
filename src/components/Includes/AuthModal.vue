@@ -78,7 +78,7 @@ export default {
   name: 'AuthModal',
   data () {
     return {
-      form_active: null,
+      //form_active: null,
       form_signin: {
         email: '',
         password: '',
