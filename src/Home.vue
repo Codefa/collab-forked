@@ -16,6 +16,8 @@
         </b-row>
       </b-container>
     </section>
+    <section id="benefits"><div class="container"><div class="row"><div class="col"><h1 class="page-title">How it works?</h1></div></div> <div class="row"><div class="benefit_item col-4"><div class="benefit_img"><img src="https://sauspa.com/search.svg"></div> <div class="benefit_meta"><h3>Discover amazing places</h3> <p>Inserisci una destinazione</p></div></div> <div class="benefit_item col-4"><div class="benefit_img"><img src="https://sauspa.com/calendar.svg"></div> <div class="benefit_meta"><h3>Choose and book a spa</h3> <p>Inserisci una destinazione</p></div></div> <div class="benefit_item col-4"><div class="benefit_img"><img src="https://sauspa.com/leaf.svg"></div> <div class="benefit_meta"><h3>Enjoy</h3> <p>Inserisci una destinazione</p></div></div></div> <hr></div></section>
+    
     <section id="home_categories">
       <b-container>
         <b-row>
