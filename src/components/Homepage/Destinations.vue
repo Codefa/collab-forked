@@ -37,13 +37,13 @@
         </b-container>
     </section>
 </template>
-<script>
-    export default {
-        name: 'Destinations',
 
-        data() {
-            return {}
-        }
-    }
+<script>
+export default {
+  name: 'Destinations',
+  data () {
+    return {}
+  }
+}
 
 </script>

@@ -39,11 +39,11 @@
 </template>
 
 <script>
-    export default {
-        name: 'Explore',
-        data() {
-            return {}
-        }
-    }
+export default {
+  name: 'Explore',
+  data () {
+    return {}
+  }
+}
 
 </script>

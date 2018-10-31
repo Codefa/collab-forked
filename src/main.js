@@ -12,19 +12,19 @@ import '../src/assets/css/app.css'
 
 Vue.use(BootstrapVue)
 Vue.use(VueGoogleMaps, {
-    load: {
-        key: 'AIzaSyCe1exctmeJjIb4guyT6newSpyJ7kA3aLc',
-        libraries: 'places'
-    }
+  load: {
+    key: 'AIzaSyCe1exctmeJjIb4guyT6newSpyJ7kA3aLc',
+    libraries: 'places'
+  }
 })
 Vue.component('app-header', NavBar)
 Vue.component('app-footer', Footer)
 
+/* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    router,
-    template: '<App/>',
-    components: {
-        App
-    }
+  el: '#app',
+  router,
+  // store,
+  template: '<App/>',
+  components: { App }
 })

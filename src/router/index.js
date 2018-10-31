@@ -12,52 +12,53 @@ import UserSettings from '@/components/User/Settings'
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
-    routes: [
-        {
-            path: '/',
-            name: 'Home',
-            component: Home
-		},
-        {
-            path: '/search',
-            name: 'Search',
-            component: Search
-    }, {
-            path: '/explore',
-            name: 'Explore',
-            component: Explore
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
     },
-        {
-            path: '/partner',
-            name: 'PartnerIndex',
-            component: PartnerIndex
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search
     },
-        {
-            path: '/partner/join',
-            name: 'PartnerIndex',
-            component: PartnerIndex
+    {
+      path: '/explore',
+      name: 'Explore',
+      component: Explore
     },
-        {
-            path: '/partner/dashboard',
-            name: 'Dashboard',
-            component: Dashboard
+    {
+      path: '/partner',
+      name: 'PartnerIndex',
+      component: PartnerIndex
     },
-        {
-            path: '/user/saved',
-            name: 'Saved',
-            component: UserSaved
+    {
+      path: '/partner/join',
+      name: 'PartnerIndex',
+      component: PartnerIndex
+    },
+    {
+      path: '/partner/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
+    },
+    {
+      path: '/user/saved',
+      name: 'Saved',
+      component: UserSaved
     },
 
-        {
-            path: '/user/profile',
-            name: 'Dashboard',
-            component: UserProfile
+    {
+      path: '/user/profile',
+      name: 'Dashboard',
+      component: UserProfile
     },
-        {
-            path: '/user/settings',
-            name: 'Settings',
-            component: UserSettings
+    {
+      path: '/user/settings',
+      name: 'Settings',
+      component: UserSettings
     }
-	]
+  ]
 })

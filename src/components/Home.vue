@@ -73,26 +73,25 @@
 </template>
 
 <script>
-    import MainSearch from '@/components/Includes/MainSearch'
-    import LastListings from '@/components/Homepage/LastListings'
-    import UserLastViews from '@/components/Includes/UserLastViews'
-    import LastLuxury from '@/components/Homepage/LastLuxury'
-    import Destinations from '@/components/Homepage/Destinations'
+import MainSearch from '@/components/Includes/MainSearch'
+import LastListings from '@/components/Homepage/LastListings'
+import UserLastViews from '@/components/Includes/UserLastViews'
+import LastLuxury from '@/components/Homepage/LastLuxury'
+import Destinations from '@/components/Homepage/Destinations'
 
-
-    export default {
-        name: 'Home',
-        components: {
-            MainSearch,
-            LastListings,
-            UserLastViews,
-            LastLuxury,
-            Destinations,
-        },
-        data() {
-            return {}
-        }
-    }
+export default {
+  name: 'Home',
+  components: {
+    MainSearch,
+    LastListings,
+    UserLastViews,
+    LastLuxury,
+    Destinations
+  },
+  data () {
+    return {}
+  }
+}
 
 </script>
 <style>

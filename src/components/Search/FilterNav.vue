@@ -1,33 +1,32 @@
 <template>
-    <div id="filterNav">
-        <div id="subnav_inner" class="nav_filter nav_filter_resorts">
-            <b-nav>
-                <b-nav-item active>Active</b-nav-item>
-                <b-nav-item>Link</b-nav-item>
-                <b-nav-item><button @click="showMap = !showMap">
-                        {{ showMap ? 'Hide' : 'Show' }} Map</button></b-nav-item>
-                <b-nav-item-dropdown text="Sort  by" right>
-                    <b-dropdown-item href="#">Top rated</b-dropdown-item>
-                    <b-dropdown-item href="#">Last added</b-dropdown-item>
-                    <b-dropdown-item href="#"></b-dropdown-item>
-                    <b-dropdown-item href="#">FA</b-dropdown-item>
-                </b-nav-item-dropdown>
-            </b-nav>
-        </div>
+  <div id="filterNav">
+    <div id="subnav_inner" class="nav_filter nav_filter_resorts">
+      <b-nav>
+        <b-nav-item active>Active</b-nav-item>
+        <b-nav-item>Link</b-nav-item>
+        <b-nav-item><button @click="showMap = !showMap">
+            {{ showMap ? 'Hide' : 'Show' }} Map</button></b-nav-item>
+        <b-nav-item-dropdown text="Sort  by" right>
+          <b-dropdown-item href="#">Top rated</b-dropdown-item>
+          <b-dropdown-item href="#">Last added</b-dropdown-item>
+          <b-dropdown-item href="#"></b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-nav>
     </div>
+  </div>
 </template>
 
 
 <script>
-    export default {
-        name: 'FilterNav',
-        data() {
-            return {
-                showMap: true
-            }
-        }
+export default {
+  name: 'FilterNav',
+  data () {
+    return {
+      showMap: true
     }
-
+  }
+}
 </script>
 
 <style scoped>
