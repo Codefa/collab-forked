@@ -35,3 +35,11 @@
 </b-row>
 </b-container>
 </section>
+<script>
+  export default {
+    name: 'BecomePartnerInfo',
+    data () {
+      return {}
+    }
+  }
+</script>
