@@ -4,7 +4,7 @@ import Home from '@/components/Home'
 import Search from '@/components/Search/Index'
 import Explore from '@/components/Explore/Index'
 import Dashboard from '@/components/Partner/Dashboard'
-import PartnerIndex from '@/components/Partner/Join/Index'
+import PartnerJoin from '@/components/Partner/Join/Index'
 import UserProfile from '@/components/User/Profile'
 import UserSaved from '@/components/User/Saved'
 import UserSettings from '@/components/User/Settings'
@@ -29,15 +29,15 @@ export default new Router({
       name: 'Explore',
       component: Explore
     },
-    {
-      path: '/partner',
-      name: 'PartnerIndex',
-      component: PartnerIndex
-    },
+    // {
+    //   path: '/partner',
+    //   name: 'PartnerIndex',
+    //   component: PartnerIndex
+    // },
     {
       path: '/partner/join',
-      name: 'PartnerIndex',
-      component: PartnerIndex
+      name: 'PartnerJoin',
+      component: PartnerJoin
     },
     {
       path: '/partner/dashboard',
@@ -52,7 +52,7 @@ export default new Router({
 
     {
       path: '/user/profile',
-      name: 'Dashboard',
+      name: 'UserProfile',
       component: UserProfile
     },
     {

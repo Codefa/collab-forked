@@ -32,6 +32,7 @@
 
       </b-collapse>
     </b-navbar>
+    <AuthModal />
   </div>
 </template>
 
@@ -48,6 +49,15 @@ export default {
   },
   data () {
     return {}
+  },
+  methods: {
+    flip: function (which, e) {
+      e.preventDefault()
+      this.$root.$emit('bv::show::modal', 'auth_modal')
+      if (which !== this.form_active) {
+        this.form_active = which
+      }
+    }
   }
 }
 </script>

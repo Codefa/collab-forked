@@ -1,6 +1,6 @@
 <template>
   <div>
-    <GmapMap :center="{lat:0, lng:0}" :zoom="2" style="width: auto; height: 300px">
+    <GmapMap :center="{lat:0, lng:0}" :zoom="2" style="width: auto; height: 450px">
       <GmapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position" label="$" />
     </GmapMap>
   </div>

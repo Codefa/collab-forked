@@ -91,11 +91,10 @@ export default {
     return {}
   }
 }
-
 </script>
-<style>
-    #MainSearch input {
-        border: none;
-    }
 
+<style scoped>
+#MainSearch input {
+  border: none;
+}
 </style>

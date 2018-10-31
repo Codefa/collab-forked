@@ -1,5 +1,7 @@
 <template>
   <div id="search">
+    <button @click="showMap = !showMap">
+            {{ showMap ? 'Hide' : 'Show' }} Map</button>
     <FilterNav />
     <b-container fluid>
 
@@ -8,13 +10,10 @@
 
       </div>
       <div id="map_src">
-
         <div v-show="showMap">
           <MapSearch />
-
         </div>
       </div>
-
     </b-container>
   </div>
 
@@ -31,7 +30,9 @@ export default {
     MapSearch
   },
   data () {
-    return {}
+    return {
+      showMap: true
+    }
   },
   computed: {
     setMarkers () {
@@ -62,19 +63,18 @@ export default {
 </script>
 
 <style scoped>
-    div#map_src {
-        position: fixed;
-        width: 40%;
-        height: 100vh;
-        background: #f5f5f5;
-        display: inline-block;
-        float: left;
-    }
+  div#map_src {
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    background: #f5f5f5;
+    display: inline-block;
+    float: left;
+  }
 
-    div#lisitngs_src {
-        width: 60%;
-        display: inline-block;
-        float: left;
-    }
-
+  div#lisitngs_src {
+    width: 60%;
+    display: inline-block;
+    float: left;
+  }
 </style>
