@@ -87,13 +87,13 @@ export default {
     }
   },
   methods: {
-    // flip: function (which, e) {
-    //   e.preventDefault()
-    //   this.$root.$emit('bv::show::modal', 'auth_modal')
-    //   if (which !== this.form_active) {
-    //     this.form_active = which
-    //   }
-    // },
+    flip: function (which, e) {
+     e.preventDefault()
+       this.$root.$emit('bv::show::modal', 'auth_modal')
+       if (which !== this.form_active) {
+         this.form_active = which
+       }
+  },
     onSubmit: function (e) {
       e.preventDefault()
       axios.post('/user/login', {
