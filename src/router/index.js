@@ -5,6 +5,8 @@ import Search from '@/components/Search/Index'
 import Explore from '@/components/Explore/Index'
 import Dashboard from '@/components/Partner/Dashboard'
 import PartnerJoin from '@/components/Partner/Join/Index'
+import BecomePartnerInfo from '@/components/Partner/Join/Info'
+import BecomePartnerLocation from '@/components/Partner/Join/Location'
 import UserProfile from '@/components/User/Profile'
 import UserSaved from '@/components/User/Saved'
 import UserSettings from '@/components/User/Settings'
@@ -29,11 +31,16 @@ export default new Router({
       name: 'Explore',
       component: Explore
     },
-    // {
-    //   path: '/partner',
-    //   name: 'PartnerIndex',
-    //   component: PartnerIndex
-    // },
+     {
+       path: '/become-partner/info',
+      name: 'BecomePartnerInfo',
+       component: BecomePartnerInfo
+     },
+    {
+       path: '/become-partner/location',
+      name: 'BecomePartnerLocation',
+       component: BecomePartnerLocation
+     },
     {
       path: '/partner/join',
       name: 'PartnerJoin',
