@@ -15,7 +15,7 @@ export default {
       this.$root.$emit('bv::show::modal', 'auth_modal')
       if (which !== this.form_active) {
         this.form_active = which
-      };
+      },
     }
     // onSubmit: function (e) {
     //   e.preventDefault()
