@@ -1,5 +1,5 @@
 <template>
-
+<div>
   <b-modal id="auth_modal" hide-footer centered no-fade lazy>
     <div id="signin_block" :class="{ 'active': form_active == 'signin' }">
       <b-button type="submit" block variant="blue">Facebook</b-button>
@@ -69,13 +69,11 @@
         </b-form-group>
       </b-form>
     </div>
-
   </b-modal>
+  </div>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'AuthModal',
   data () {
@@ -121,61 +119,3 @@ export default {
 }
 
 </script>
-
-
-<style scoped>
-    .modal-content {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, .1);
-    }
-
-    #auth_modal___BV_modal_body_>div {
-        display: none;
-    }
-
-    #auth_modal___BV_modal_body_>div.active {
-        display: block;
-    }
-
-    #auth_modal a {
-        color: var(--primary);
-    }
-
-    #auth_modal form {
-        margin: 20px 0px;
-    }
-
-    @media (min-width: 576px) {
-        .modal-dialog {
-            max-width: 550px !important;
-            margin: auto;
-        }
-    }
-
-    .modal-header {
-        padding: 10px 20px;
-    }
-
-    #auth_modal .modal-body {
-        padding: 30px;
-    }
-
-    s.custom-control-label::before {
-        width: 20px;
-        height: 20px;
-        border: 1px solid rgba(0, 0, 0, .2);
-    }
-
-    .auth_links {
-        text-align: center;
-        width: 100%;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-        margin-top: 20px;
-        padding: 10px 0px;
-    }
-
-    .auth_links a {
-        font-weight: bold;
-    }
-
-</style>
