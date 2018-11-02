@@ -4,7 +4,7 @@
       <b-row>
         <b-col>
           <h1 class="page_title">
-            Continue your booking
+            Continue your search
           </h1>
         </b-col>
       </b-row>
