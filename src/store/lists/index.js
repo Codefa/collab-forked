@@ -3,46 +3,55 @@ import axios from 'axios'
 export default {
   state: {
     loadedLists: [],
-    loadedLuxury: []
+    priceLists: [],
+    user: {
+      id: '34'
+      // things related to user added here
+    }
   },
   mutations: {
-    setLists (state, payload) {
+    setLoadedLists (state, payload) {
       state.loadedLists = payload
     },
-    setLuxury (state, payload) {
-      state.loadedLuxury = payload
+    setLoadedListsPrice (state, payload) {
+      state.priceLists = payload
     }
   },
   actions: {
-    loadedLists ({ commit }) {
-      axios.get('https://rocketgo.it/public/api/v1/search')
+    loadLists ({commit}) {
+      axios.get('https://raw.githubusercontent.com/Codefa/nuxt-static-test/master/search.json')
       .then(result => result.data)
       .then(lists => {
+        const price = []
         for (const key in lists) {
-          if (lists.hasOwnProperty(key)) {
-            // console.log(lists[key].address)
-            // const add = lists[key].address
-            // commit('usePlace', add)
-          }
+          price.push({
+            price: String(lists[key].mid_price)
+          })
         }
-        commit('setLists', lists)
+        commit('setLoadedListsPrice', price)
+        commit('setLoadedLists', lists)
       })
-    },
-    loadedLuxury ({ commit }) {
-      axios.get('https://rocketgo.it/public/api/v1/search')
-      .then(result => result.data)
-      .then(lists => {
-        console.log(lists)
-        commit('setLuxury', lists)
+      .catch((error) => {
+        console.log(error)
       })
     }
   },
   getters: {
+    setLoadedListsPrice (state) {
+      return state.priceLists
+    },
     loadedLists (state) {
       return state.loadedLists
+      // return state.loadedLists.sort((listA, listB) => {
+      //   return listA.created > listB.created
+      // })
     },
-    loadedLuxury (state) {
-      return state.loadedLuxury
+    loadedList (state) {
+      return (listId) => {
+        return state.loadedLists.find((list) => {
+          return list.id === listId
+        })
+      }
     }
   }
 }
