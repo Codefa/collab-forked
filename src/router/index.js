@@ -10,6 +10,7 @@ import BecomePartnerLocation from '@/components/Partner/Join/Location'
 import UserProfile from '@/components/User/Profile'
 import UserSaved from '@/components/User/Saved'
 import UserSettings from '@/components/User/Settings'
+import Resort from '@/components/Resorts/Resort'
 
 Vue.use(Router)
 
@@ -20,6 +21,12 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/resort/:id',
+      name: 'Resort',
+      props: true,
+      component: Resort
     },
     {
       path: '/search',
@@ -56,7 +63,6 @@ export default new Router({
       name: 'Saved',
       component: UserSaved
     },
-
     {
       path: '/user/profile',
       name: 'UserProfile',

@@ -3,13 +3,13 @@
     <app-header></app-header>
     <router-view></router-view>
     <app-footer></app-footer>
-    <div id="preloader">
+    <!-- <div id="preloader">
       <div class="la-ball-pulse">
         <div></div>
         <div></div>
         <div></div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

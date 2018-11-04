@@ -1,51 +1,39 @@
 <template>
   <div>
-    <GmapMap :center="{lat:0, lng:0}" :zoom="2" style="width: auto; height: 450px">
-      <GmapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position" label="$" />
+    <GmapMap :center="{lat:41.9050707, lng:2.9029856}" :zoom="2" style="width: auto; height: 450px">
+      <div v-for="label in labels" :key="label.key">
+        <GmapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" @click="center=m.position" :label="{'text': '$' + label.price, 'color': 'black', fontSize: '16px'}" />
+      </div>
     </GmapMap>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-    // import { EventBus } from '@/event-bus.js'
+// import { EventBus } from '@/event-bus.js'
 export default {
   name: 'MapSearch',
-        // props: {
-        //   markers: {
-        //     type: Array,
-        //     required: true
-        //   }
-        // },
-  data () {
-    return {
-      markers: []
-    }
-  },
   computed: {
+    // icon () {
+    //   const url = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+    //   return url
+    // },
     place () {
       return this.$store.getters.place
+    },
+    markers () {
+      return this.$store.getters.setMarkers
+    },
+    labels () {
+      return this.$store.getters.setLoadedListsPrice
     }
   },
   created () {
-    this.fetchNearestLocations()
-  },
-  methods: {
-    fetchNearestLocations () {
-      axios.get('https://raw.githubusercontent.com/Codefa/nuxt-static-test/master/resorts.json')
-      .then(response => {
-        let data = response.data
-        for (const key in data) {
-          this.markers.push({
-            position: {
-              lat: parseFloat(data[key].lat),
-              lng: parseFloat(data[key].lng)
-            }
-          })
-        }
-      })
-    }
+    this.$store.dispatch('fetchNearestLocations')
+    console.log(this.$store.getters.setLoadedListsPrice)
   }
 }
-
 </script>
+
+<style scoped>
+
+</style>

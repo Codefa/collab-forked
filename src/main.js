@@ -12,6 +12,7 @@ import Footer from './components/Includes/Footer'
 // import ResortLists from './components/SearchListings/ResortLists'
 import '../src/assets/css/app.css'
 import VeeValidate from 'vee-validate'
+import UserAuth from './components/Includes/AuthModal'
 
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
@@ -24,6 +25,7 @@ Vue.use(VueGoogleMaps, {
 Vue.use(VeeValidate)
 Vue.component('app-header', NavBar)
 Vue.component('app-footer', Footer)
+Vue.component('app-userauth', UserAuth)
 
 /* eslint-disable no-new */
 new Vue({
@@ -31,5 +33,8 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  created () {
+    this.$store.dispatch('loadLists')
+  }
 })
