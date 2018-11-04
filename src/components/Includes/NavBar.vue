@@ -37,12 +37,10 @@
 
 <script>
 import MainSearch from '@/components/Includes/MainSearch'
-import Auth from '@/components/Includes/Auth'
 export default {
   name: 'navbar',
   components: {
-    MainSearch,
-    Auth
+    MainSearch
   }
 }
 </script>

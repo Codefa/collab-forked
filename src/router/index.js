@@ -38,16 +38,16 @@ export default new Router({
       name: 'Explore',
       component: Explore
     },
-     {
-       path: '/become-partner/info',
-      name: 'BecomePartnerInfo',
-       component: BecomePartnerInfo
-     },
     {
-       path: '/become-partner/location',
+      path: '/become-partner/info',
+      name: 'BecomePartnerInfo',
+      component: BecomePartnerInfo
+    },
+    {
+      path: '/become-partner/location',
       name: 'BecomePartnerLocation',
-       component: BecomePartnerLocation
-     },
+      component: BecomePartnerLocation
+    },
     {
       path: '/partner/join',
       name: 'PartnerJoin',
