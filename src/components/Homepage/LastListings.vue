@@ -35,6 +35,7 @@
             </div>
           </div>
         </b-col>
+        <b-pagination-nav :link-gen="linkGen" :number-of-pages="numPages" v-model="currentPage" />
       </b-row>
     </b-container>
   </section>
@@ -44,11 +45,29 @@
 export default {
   name: 'LastListings',
   data () {
-    return {}
+    return {
+      currentPage: 1,
+      perPage: 4
+    }
   },
   computed: {
     lists () {
-      return this.$store.getters.loadedLists
+      const items = this.$store.getters.loadedLists
+      // Return just page of items needed
+      return items.slice(
+        (this.currentPage - 1) * this.perPage,
+        this.currentPage * this.perPage
+      )
+    },
+    numPages () {
+      return Math.ceil(this.$store.getters.loadedLists.length / this.perPage)
+    }
+  },
+  methods: {
+    linkGen (pageNum) {
+      return {
+        path: '#page=' + pageNum
+      }
     }
   }
 }

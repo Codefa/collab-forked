@@ -98,7 +98,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   #MainSearch input {
     border: none;
   }
