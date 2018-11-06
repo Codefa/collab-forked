@@ -6,10 +6,10 @@
           <app-datefilter></app-datefilter>
         </b-nav-item>
         <b-nav-item>
-          <div id="show-modal" @click="showFilter = true">Guest</div>
+          <div id="show-modal-guest" @click="showGuestFilter = true">Guest</div>
         </b-nav-item>
         <b-nav-item>
-          <div id="show-modal" @click="showFilter = true">Price</div>
+          <div id="show-modal-price" @click="showPriceFilter = true">Price</div>
         </b-nav-item>
         <b-nav-item-dropdown text="Sort  by" right>
           <b-dropdown-item href="#">Top rated</b-dropdown-item>
@@ -19,10 +19,10 @@
         </b-nav-item-dropdown>
       </b-nav>
     </div>
-    <pricemodal v-if="showFilter" @close="showFilter = false">
+    <pricemodal v-if="showPriceFilter" @close="showPriceFilter = false">
       <h3 slot="header">custom header</h3>
     </pricemodal>
-    <guestmodal v-if="showFilter" @close="showFilter = false">
+    <guestmodal v-if="showGuestFilter" @close="showGuestFilter = false">
       <h3 slot="header">custom header</h3>
     </guestmodal>
   </div>
@@ -41,7 +41,8 @@ export default {
   },
   data () {
     return {
-      showFilter: false
+      showPriceFilter: false,
+      showGuestFilter: false
     }
   }
 }
