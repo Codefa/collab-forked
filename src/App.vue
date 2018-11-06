@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <v-app>
       <app-header></app-header>
       <router-view></router-view>
       <app-footer></app-footer>
@@ -11,7 +10,6 @@
         <div></div>
       </div>
     </div> -->
-    </v-app>
   </div>
 </template>
 
