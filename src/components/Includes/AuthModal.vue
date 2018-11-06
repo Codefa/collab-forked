@@ -1,7 +1,7 @@
 <template>
   <div>
-    <span @click="flip('signin', $event)">Login</span>
-    <span @click="flip('signup', $event)">Signup</span>
+    <b-nav-item @click="flip('signin', $event)">Login</b-nav-item>
+    <b-nav-item @click="flip('signup', $event)">Signup</b-nav-item>
     <b-modal id="auth_modal" hide-footer centered no-fade lazy>
       <div id="signin_block" :class="{ 'active': form_active == 'signin' }">
         <b-button type="submit" block variant="blue">Facebook</b-button>
