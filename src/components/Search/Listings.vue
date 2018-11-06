@@ -22,7 +22,6 @@
           </GmapMap>
       </section>
   </div>
-  </div>
 </template>
 
 <script>

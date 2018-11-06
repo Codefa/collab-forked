@@ -2,8 +2,15 @@
   <div id="filterNav">
     <div id="subnav_inner" class="nav_filter nav_filter_resorts">
       <b-nav>
-        <b-nav-item active>Active</b-nav-item>
-        <b-nav-item>Link</b-nav-item>
+        <b-nav-item active>
+          <app-datefilter></app-datefilter>
+        </b-nav-item>
+        <b-nav-item>
+          <app-guestfilter></app-guestfilter>
+        </b-nav-item>
+        <b-nav-item>
+          <button id="show-modal" @click="showFilter = true">price</button>
+        </b-nav-item>
         <b-nav-item-dropdown text="Sort  by" right>
           <b-dropdown-item href="#">Top rated</b-dropdown-item>
           <b-dropdown-item href="#">Last added</b-dropdown-item>
@@ -12,13 +19,30 @@
         </b-nav-item-dropdown>
       </b-nav>
     </div>
+    <pricemodal v-if="showFilter" @close="showFilter = false">
+      <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+      <h3 slot="header">custom header</h3>
+    </pricemodal>
   </div>
 </template>
 
 
 <script>
+import pricemodal from '@/components/Search/Filters/Price/PriceModal'
+
 export default {
-  name: 'FilterNav'
+  name: 'FilterNav',
+  components: {
+    pricemodal
+  },
+  data () {
+    return {
+      showFilter: false
+    }
+  }
 }
 </script>
 
