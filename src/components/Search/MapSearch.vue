@@ -29,7 +29,6 @@ export default {
   },
   created () {
     this.$store.dispatch('fetchNearestLocations')
-    console.log(this.$store.getters.setLoadedListsPrice)
   }
 }
 </script>

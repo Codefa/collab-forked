@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="overlay_mask">
-      <div class="filter_wrapper">
-        <div class="picker_container">
+      <div class="filter_wrapper" @click="$emit('close')">
+        <div class="picker_container" @click.stop>
           <div class="filter_body">
             <slot name="header">
               <b-col>
