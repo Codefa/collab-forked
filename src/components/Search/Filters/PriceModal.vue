@@ -1,13 +1,29 @@
 <template>
-  <div name="filter_picker">
+  <div>
     <div class="overlay_mask">
-      <div class="filter_wrapper" @click="$emit('close')">
+      <div class="filter_wrapper">
         <div class="picker_container">
           <div class="filter_body">
-            <pricerangefilter></pricerangefilter>
+            <slot name="header">
+              <b-col>
+                The average nightly price is $73
+                <br>
+              </b-col>
+            </slot>
+            <slot name="body">
+              <b-col>
+                <b-form-input id="range" type="range" v-model="price" max="1000" min="10"></b-form-input>
+                <br>
+                <span class="mr-sm-2">${{ price }}</span>
+              </b-col>
+            </slot>
           </div>
           <div class="filter_footer">
-            <b-btn size="sm">close</b-btn>
+            <slot name="footer">
+              <b-btn size="sm" @click="$emit('close'); getdata()">
+                OK
+              </b-btn>
+            </slot>
           </div>
         </div>
       </div>
@@ -16,12 +32,17 @@
 </template>
 
 <script>
-import pricerangefilter from '@/components/Search/Filters/Price/PriceRange'
-
 export default {
   name: 'modal',
-  components: {
-    pricerangefilter
+  data () {
+    return {
+      price: 10
+    }
+  },
+  methods: {
+    getdata () {
+      console.log(this.price)
+    }
   }
 }
 </script>

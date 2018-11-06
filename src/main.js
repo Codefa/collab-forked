@@ -16,7 +16,6 @@ import '../src/assets/css/app.css'
 import VeeValidate from 'vee-validate'
 import UserAuth from './components/Includes/AuthModal'
 import DateFilter from './components/Search/Filters/DateFilter'
-import GuestFilter from './components/Search/Filters/GuestFilter'
 
 const datepickerOptions = {}
 
@@ -34,7 +33,6 @@ Vue.component('app-header', NavBar)
 Vue.component('app-footer', Footer)
 Vue.component('app-userauth', UserAuth)
 Vue.component('app-datefilter', DateFilter)
-Vue.component('app-guestfilter', GuestFilter)
 
 /* eslint-disable no-new */
 new Vue({

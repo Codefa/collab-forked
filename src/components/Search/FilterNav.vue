@@ -6,10 +6,10 @@
           <app-datefilter></app-datefilter>
         </b-nav-item>
         <b-nav-item>
-          <app-guestfilter></app-guestfilter>
+          <div id="show-modal" @click="showFilter = true">Guest</div>
         </b-nav-item>
         <b-nav-item>
-          <button id="show-modal" @click="showFilter = true">price</button>
+          <div id="show-modal" @click="showFilter = true">Price</div>
         </b-nav-item>
         <b-nav-item-dropdown text="Sort  by" right>
           <b-dropdown-item href="#">Top rated</b-dropdown-item>
@@ -20,22 +20,23 @@
       </b-nav>
     </div>
     <pricemodal v-if="showFilter" @close="showFilter = false">
-      <!--
-      you can use custom content here to overwrite
-      default content
-    -->
       <h3 slot="header">custom header</h3>
     </pricemodal>
+    <guestmodal v-if="showFilter" @close="showFilter = false">
+      <h3 slot="header">custom header</h3>
+    </guestmodal>
   </div>
 </template>
 
 
 <script>
-import pricemodal from '@/components/Search/Filters/Price/PriceModal'
+import pricemodal from '@/components/Search/Filters/PriceModal'
+import guestmodal from '@/components/Search/Filters/GuestModal'
 
 export default {
   name: 'FilterNav',
   components: {
+    guestmodal,
     pricemodal
   },
   data () {
