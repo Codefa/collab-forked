@@ -14,31 +14,31 @@
               <b-col>
                 <div class="my-4" ref="form">
                   adult -
-                  <button class="disable" id="qty_btn_min" @click="decreaseAdults(adult)">
+                  <button class="qty_btn" id="qty_btn_min" @click="decreaseAdults(adult)">
                     _
                   </button>
                   <h3>{{adult.num}}</h3>
-                  <button id="qty_btn_plus" @click="increaseAdults(adult)">
+                  <button class="qty_btn" id="qty_btn_plus" @click="increaseAdults(adult)">
                     +
                   </button>
                   <br>
                   children
                   (Age 2 - 12) -
-                  <button id="qty_btn_min" @click="decreaseChildren(children)">
+                  <button class="qty_btn" id="qty_btn_min" @click="decreaseChildren(children)">
                     _
                   </button>
                   <h3>{{children.num}}</h3>
-                  <button sid="qty_btn_plus" @click="increaseChildren(children)">
+                  <button class="qty_btn" id="qty_btn_plus" @click="increaseChildren(children)">
                     +
                   </button>
                   <br>
                   Babies
                   Less than 2 -
-                  <button id="qty_btn_min" @click="decreaseBabies(Babies)">
+                  <button class="qty_btn" id="qty_btn_min" @click="decreaseBabies(Babies)">
                     _
                   </button>
                   <h3>{{Babies.num}}</h3>
-                  <button id="qty_btn_plus" @click="increaseBabies(Babies)">
+                  <button class="qty_btn" id="qty_btn_plus" @click="increaseBabies(Babies)">
                     +
                   </button>
                 </div>
