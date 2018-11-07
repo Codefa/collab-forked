@@ -14,31 +14,31 @@
               <b-col>
                 <div class="my-4" ref="form">
                   adult -
-                  <b-button size="sm" variant="secondary" @click="decreaseAdults(adult)">
+                  <b-button class="disable" id="qty_btn_min" @click="decreaseAdults(adult)">
                     _
                   </b-button>
                   <h3>{{adult.num}}</h3>
-                  <b-button size="sm" variant="secondary" @click="increaseAdults(adult)">
+                  <b-button id="qty_btn_plus" @click="increaseAdults(adult)">
                     +
                   </b-button>
                   <br>
                   children
                   (Age 2 - 12) -
-                  <b-button size="sm" variant="secondary" @click="decreaseChildren(children)">
+                  <b-button id="qty_btn_min" @click="decreaseChildren(children)">
                     _
                   </b-button>
                   <h3>{{children.num}}</h3>
-                  <b-button size="sm" variant="secondary" @click="increaseChildren(children)">
+                  <b-button sid="qty_btn_plus" @click="increaseChildren(children)">
                     +
                   </b-button>
                   <br>
                   Babies
                   Less than 2 -
-                  <b-button size="sm" variant="secondary" @click="decreaseBabies(Babies)">
+                  <b-button id="qty_btn_min" @click="decreaseBabies(Babies)">
                     _
                   </b-button>
                   <h3>{{Babies.num}}</h3>
-                  <b-button size="sm" variant="secondary" @click="increaseBabies(Babies)">
+                  <b-button id="qty_btn_plus" @click="increaseBabies(Babies)">
                     +
                   </b-button>
                 </div>
@@ -138,7 +138,7 @@ export default {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, .1);
   transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 14px 36px 2px !important;
 }
 
 .filter_body {
