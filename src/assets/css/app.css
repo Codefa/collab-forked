@@ -104,7 +104,23 @@
  a:hover {
      text-decoration: none !important;
  }
-
+.qty_btn {
+    border: 1px solid var(--primary);
+    display: inline-block !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    line-height: 1 !important;
+    position: relative !important;
+    touch-action: manipulation !important;
+    width: 32px !important;
+    height: 32px !important;
+    box-shadow: none !important;
+    border-radius: 50% !important;
+    border-style: solid !important;
+    /* border-color: rgb(0, 132, 137) !important; */
+    background: transparent !important;
+    border-width: 1px !important;
+}
  .custom-control-label::before {
      top: 2px;
      left: -30px;

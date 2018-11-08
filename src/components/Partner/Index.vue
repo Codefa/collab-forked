@@ -7,17 +7,12 @@
             <div class="site_heading">
               <h1>Become a partner</h1>
               <p class="subheading">Start posting your property</p>
-               <b-button href="/become-partner/resort/info" variant="primary"
-                >Get started</b-button
-              >
+              <b-button href="/become-partner/resort/info" variant="primary">Get started</b-button>
               <a href="#" class="underline">Learn more ›</a>
             </div>
           </b-col>
           <b-col cols="6 text-right">
-            <img
-              class="img_responsive"
-              src="https://images.pexels.com/photos/275766/pexels-photo-275766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            />
+            <img class="img_responsive" src="https://images.pexels.com/photos/275766/pexels-photo-275766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
           </b-col>
         </b-row>
       </div>

@@ -14,42 +14,42 @@
               <b-col>
                 <div class="my-4" ref="form">
                   adult -
-                  <b-button size="sm" variant="secondary" @click="decreaseAdults(adult)">
+                  <button class="qty_btn" id="qty_btn_min" @click="decreaseAdults(adult)">
                     _
-                  </b-button>
+                  </button>
                   <h3>{{adult.num}}</h3>
-                  <b-button size="sm" variant="secondary" @click="increaseAdults(adult)">
+                  <button class="qty_btn" id="qty_btn_plus" @click="increaseAdults(adult)">
                     +
-                  </b-button>
+                  </button>
                   <br>
                   children
                   (Age 2 - 12) -
-                  <b-button size="sm" variant="secondary" @click="decreaseChildren(children)">
+                  <button class="qty_btn" id="qty_btn_min" @click="decreaseChildren(children)">
                     _
-                  </b-button>
+                  </button>
                   <h3>{{children.num}}</h3>
-                  <b-button size="sm" variant="secondary" @click="increaseChildren(children)">
+                  <button class="qty_btn" id="qty_btn_plus" @click="increaseChildren(children)">
                     +
-                  </b-button>
+                  </button>
                   <br>
                   Babies
                   Less than 2 -
-                  <b-button size="sm" variant="secondary" @click="decreaseBabies(Babies)">
+                  <button class="qty_btn" id="qty_btn_min" @click="decreaseBabies(Babies)">
                     _
-                  </b-button>
+                  </button>
                   <h3>{{Babies.num}}</h3>
-                  <b-button size="sm" variant="secondary" @click="increaseBabies(Babies)">
+                  <button class="qty_btn" id="qty_btn_plus" @click="increaseBabies(Babies)">
                     +
-                  </b-button>
+                  </button>
                 </div>
               </b-col>
             </slot>
           </div>
           <div class="filter_footer">
             <slot name="footer">
-              <b-btn size="sm" @click="$emit('close'); getdata()">
+              <b-button size="sm" @click="$emit('close'); getdata()">
                 OK
-              </b-btn>
+              </b-button>
             </slot>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, .1);
   transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 14px 36px 2px !important;
 }
 
 .filter_body {
