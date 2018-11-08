@@ -66,7 +66,7 @@ export default {
   methods: {
     linkGen (pageNum) {
       return {
-        path: '#page=' + pageNum
+        path: '?page=' + pageNum
       }
     }
   }

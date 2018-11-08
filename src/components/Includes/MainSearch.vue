@@ -14,3 +14,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.pac-item-query {
+  color: brown !important
+}
+</style>
+
