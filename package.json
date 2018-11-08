@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "postinstall": "npm run build",
+    /*"postinstall": "npm run build",*/
     "start": "node server.js",
     "lint": "eslint --ext .js,.vue src"
   },
@@ -22,6 +22,7 @@
     "vee-validate": "^2.1.1",
     "vue": "^2.5.17",
     "vue-airbnb-style-datepicker": "^2.1.0",
+    "vue-feather-icon": "^1.2.0",
     "vue-router": "^3.0.1",
     "vue-tiny-slider": "^0.1.28",
     "vue2-google-maps": "^0.10.2",
