@@ -4,7 +4,7 @@ import Home from '@/components/Home'
 import Search from '@/components/Search/Index'
 import Explore from '@/components/Explore/Index'
 import Dashboard from '@/components/Partner/Dashboard'
-import PartnerJoin from '@/components/Partner/Join/Index'
+import Partner from "@/components/Partner/Index";
 import BecomePartnerInfo from '@/components/Partner/Join/Info'
 import BecomePartnerLocation from '@/components/Partner/Join/Location'
 import UserProfile from '@/components/User/Profile'
@@ -39,9 +39,9 @@ export default new Router({
       component: Explore
     },
     {
-      path: '/become-partner/info',
-      name: 'BecomePartnerInfo',
-      component: BecomePartnerInfo
+      path: "/become-partner",
+      name: "Partner",
+      component: Partner
     },
     {
       path: '/become-partner/location',
