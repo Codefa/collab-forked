@@ -51,7 +51,7 @@
               <h3>Partner</h3>
               <ul class="items-block">
                 <li>
-                  <b-link href="/partner">Add your spa</b-link>
+                  <b-link href="/become-partner">Add your spa</b-link>
                 </li>
                 <li>
                   <b-link href="#">About us</b-link>
