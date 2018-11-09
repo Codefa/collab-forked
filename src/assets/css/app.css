@@ -6,7 +6,31 @@
      padding-top: 60px;
    font-family: 'Nunito Sans', sans-serif;
  }
-
+#btn_signin_fb{
+  background: #3b5998;
+  border-color: #3b5998;
+}
+#fb_logo{
+  width: 22x;
+  height: 22px;
+  background: url('https://sauspa.com/facebook_icon.svg')center;
+  background-size:cover ;
+  display: inline-block;
+    float: left;
+}
+#btn_signin_google{
+  border-color: #333;
+  color: #333;
+  background: none;
+}
+#google_logo{
+  width: 22px;
+  height: 22px;
+  background: url('https://sauspa.com/google_icon.svg')center;
+  background-size:cover ;
+  display: inline-block;
+  float: left;
+}
  .col,
  .col-1,
  .col-10,
