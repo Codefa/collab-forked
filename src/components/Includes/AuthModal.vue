@@ -5,8 +5,8 @@
 
     <b-modal id="auth_modal" hide-footer centered no-fade lazy>
       <div id="signin_block" :class="{ 'active': form_active == 'signin' }">
-        <b-button type="submit" block variant="blue">Facebook</b-button>
-        <b-button type="submit" block variant="secondary">Google+</b-button>
+        <button class="btn btn-block" id="btn_signin_fb"><icon id="fb_logo"></icon>Facebook</button> 
+<button class="btn btn-block" id="btn_signin_google"><icon id="google_logo"></icon>Google+</button>
         <b-form @submit="onSubmit">
           <b-form-group id="signin_email">
             <b-form-input v-model="form_signin.email" type="text" placeholder="Email"></b-form-input>
