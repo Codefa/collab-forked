@@ -5,7 +5,7 @@
         <b-row>
           <b-col cols="8">
             <h1 class="header-title">
-              <span class="text-primary">Sauspa</span><br>Book unique experiences</h1>
+              <span class="text-primary">Sauspa</span><br>Book unique experiences jut updated</h1>
             <div>
               <div id="main_home_search" class="card p-3" @keydown.enter="search">
                 <MainSearch />
