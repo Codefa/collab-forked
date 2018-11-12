@@ -38,7 +38,7 @@
                 </b-link>
                 <span class="price">42.00 per person</span>
                 <span class="listing_rating">
-                  <star-rating ::rating="{{ list.star_rating }}" :round-start-rating="false"></star-rating>
+                  <star-rating ::rating="list.star_rating" :round-start-rating="false"></star-rating>
                 </span>
               </div>
             </div>
