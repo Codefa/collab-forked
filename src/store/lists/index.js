@@ -19,6 +19,7 @@ export default {
   },
   actions: {
     loadLists ({commit}) {
+      commit('setLoading', true)
       axios.get('https://raw.githubusercontent.com/Codefa/nuxt-static-test/master/search.json')
       .then(result => result.data)
       .then(lists => {
@@ -30,6 +31,7 @@ export default {
         }
         commit('setLoadedListsPrice', price)
         commit('setLoadedLists', lists)
+        commit('setLoading', false)
       })
       .catch((error) => {
         console.log(error)

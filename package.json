@@ -23,6 +23,7 @@
     "vue-airbnb-style-datepicker": "^2.1.0",
     "vue-feather-icon": "^1.2.0",
     "vue-router": "^3.0.1",
+    "vue-star-rating": "^1.6.1",
     "vue-tiny-slider": "^0.1.28",
     "vue2-google-maps": "^0.10.2",
     "vue2-siema": "^0.2.2",

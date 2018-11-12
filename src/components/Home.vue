@@ -1,6 +1,5 @@
 <template>
   <div class="Home">
-
     <section id="intro_search">
       <b-container>
         <b-row>

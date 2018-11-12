@@ -16,6 +16,7 @@ import '../src/assets/css/app.css'
 import VeeValidate from 'vee-validate'
 import UserAuth from './components/Includes/AuthModal'
 import DateFilter from './components/Search/Filters/DateFilter'
+import StarRating from 'vue-star-rating'
 
 const datepickerOptions = {}
 
@@ -29,6 +30,7 @@ Vue.use(VueGoogleMaps, {
 })
 Vue.use(AirbnbStyleDatepicker, datepickerOptions)
 Vue.use(VeeValidate)
+Vue.component('star-rating', StarRating)
 Vue.component('app-header', NavBar)
 Vue.component('app-footer', Footer)
 Vue.component('app-userauth', UserAuth)

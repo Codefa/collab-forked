@@ -47,7 +47,13 @@ export default {
             position: {
               lat: parseFloat(data[key].lat),
               lng: parseFloat(data[key].lon)
-            }
+            },
+            infoText: {
+              name: data[key].name,
+              image: 'https://sauspa.com/uploads/resorts/spa3.jpg',
+              price: data[key].mid_price
+            },
+            price: data[key].mid_price
           })
         }
         commit('setLoadedPlaces', markers)
